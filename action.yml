@@ -1,0 +1,19 @@
+name: "Inclui comentário"
+description: "Inclui comentário no PR"
+author: "Thiago Arrais"
+inputs:
+  GITHUB_TOKEN:
+    description: "Token de acesso ao GitHub"
+    required: true
+  issue-id:
+    description: "Id da issue ou PR"
+    required: true
+  comment:
+    description: "Comentário a ser incluído"
+    required: true
+outputs:
+  comment-id:
+    description: "Id do comentário incluído"
+runs:
+  using: "node20"
+  main: "dist/index.js"
